@@ -1,0 +1,10 @@
+Add EV scooter videos here.
+
+Examples:
+- Test ride videos
+- Feature demonstration
+- Customer reviews
+- Showroom tour
+
+Format: MP4
+Size: Keep under 50MB for web

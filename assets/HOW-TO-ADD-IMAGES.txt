@@ -1,0 +1,154 @@
+========================================
+HOW TO ADD IMAGES TO YOUR WEBSITE
+========================================
+
+FOLDER STRUCTURE
+----------------
+assets/
+├── scooters/     - Add Comptech EV scooter photos here
+├── delivery/     - Add customer delivery photos here
+├── showroom/     - Add showroom photos here
+└── videos/       - Add promotional videos here
+
+STEP-BY-STEP GUIDE
+------------------
+
+STEP 1: Add Your Images
+------------------------
+1. Copy your images to the appropriate folders:
+   - Scooter photos → assets/scooters/
+   - Delivery photos → assets/delivery/
+   - Showroom photos → assets/showroom/
+   - Videos → assets/videos/
+
+2. Use simple filenames (no spaces):
+   ✓ Good: comptech-black.jpg, delivery-1.jpg
+   ✗ Bad: My Scooter Photo.jpg
+
+STEP 2: Update Gallery Configuration
+-------------------------------------
+1. Open: js/gallery.js in a text editor
+2. Find the "galleryData" section (around line 8)
+3. Add your image filenames:
+
+Example:
+const galleryData = {
+    scooters: [
+        'assets/scooters/comptech-black.jpg',
+        'assets/scooters/comptech-white.jpg',
+        'assets/scooters/comptech-red.jpg',
+    ],
+    delivery: [
+        'assets/delivery/customer-1.jpg',
+        'assets/delivery/customer-2.jpg',
+    ],
+    showroom: [
+        'assets/showroom/interior.jpg',
+        'assets/showroom/exterior.jpg',
+    ],
+    videos: [
+        'assets/videos/test-ride.mp4',
+    ]
+};
+
+4. Save the file
+
+STEP 3: Update Home & Product Pages
+------------------------------------
+For the home page featured scooter image:
+1. Open: index.html
+2. Find: src="assets/scooters/comptech-ev.jpg"
+3. Replace with your actual image filename
+
+For the product page main image:
+1. Open: products.html
+2. Find: src="assets/scooters/comptech-ev-main.jpg"
+3. Replace with your actual image filename
+
+IMAGE SPECIFICATIONS
+--------------------
+Recommended settings for best results:
+
+Scooter Photos:
+- Size: 1920x1080 pixels (landscape)
+- Format: JPG or PNG
+- File size: Under 500KB
+- Show: Different angles, colors, features
+
+Delivery Photos:
+- Size: 1200x800 pixels
+- Format: JPG
+- File size: Under 300KB
+- Show: Happy customers, handover moments
+
+Showroom Photos:
+- Size: 1920x1080 pixels
+- Format: JPG
+- File size: Under 500KB
+- Show: Interior, exterior, display area
+
+Videos:
+- Format: MP4 (H.264 codec)
+- Resolution: 1920x1080 or 1280x720
+- File size: Under 50MB
+- Duration: 30 seconds to 2 minutes
+
+QUICK EXAMPLE
+-------------
+Let's say you have these files:
+- comptech-matte-black.jpg
+- comptech-crystal-white.jpg
+- happy-customer.jpg
+- showroom-front.jpg
+
+1. Copy files to folders:
+   assets/scooters/comptech-matte-black.jpg
+   assets/scooters/comptech-crystal-white.jpg
+   assets/delivery/happy-customer.jpg
+   assets/showroom/showroom-front.jpg
+
+2. Edit js/gallery.js:
+   const galleryData = {
+       scooters: [
+           'assets/scooters/comptech-matte-black.jpg',
+           'assets/scooters/comptech-crystal-white.jpg',
+       ],
+       delivery: [
+           'assets/delivery/happy-customer.jpg',
+       ],
+       showroom: [
+           'assets/showroom/showroom-front.jpg',
+       ],
+       videos: []
+   };
+
+3. Save and refresh your website!
+
+TIPS FOR BEST RESULTS
+----------------------
+✓ Use high-quality images
+✓ Compress images before uploading (use tinypng.com)
+✓ Keep consistent aspect ratios
+✓ Use descriptive filenames
+✓ Test on mobile devices
+✓ Add multiple angles of scooters
+✓ Include close-ups of features
+
+TROUBLESHOOTING
+---------------
+Problem: Images not showing
+Solution: Check filename spelling, ensure files are in correct folder
+
+Problem: Images too large/slow loading
+Solution: Compress images using online tools
+
+Problem: Gallery empty
+Solution: Make sure you updated js/gallery.js with filenames
+
+NEED HELP?
+----------
+Contact: +91 9907579406
+WhatsApp: +91 9907579406
+Email: sagunmotersdewas@gmail.com
+
+========================================

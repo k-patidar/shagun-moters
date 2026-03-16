@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Shagun Moters Dewas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Shagun Moters</h1>
+                        <p class="tagline">Authorized Comptech EV Dealer</p>
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html" class="active">Gallery</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="test-ride.html" class="btn-test-ride">Book Test Ride</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Gallery</h1>
+            <p>Explore Our Collection of Comptech EV Scooters</p>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="scooters">Scooter Photos</button>
+                <button class="filter-btn" data-filter="delivery">Customer Deliveries</button>
+                <button class="filter-btn" data-filter="showroom">Showroom</button>
+                <button class="filter-btn" data-filter="videos">Videos</button>
+            </div>
+
+            <div id="galleryGrid" class="gallery-grid">
+                <!-- Dynamic content will be loaded here -->
+                <div class="gallery-message">
+                    <i class="fas fa-images"></i>
+                    <p>Loading gallery from Downloads folder...</p>
+                    <p class="note">Images and videos from today's downloads will appear here automatically</p>
+                </div>
+            </div>
+
+            <div id="videoSection" class="video-section">
+                <h2>EV Scooter Videos</h2>
+                <div id="videoGrid" class="video-grid">
+                    <!-- Dynamic video content -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImage">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div id="videoModal" class="video-modal">
+        <span class="video-close">&times;</span>
+        <div class="video-container">
+            <video id="videoPlayer" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Shagun Moters Dewas</h3>
+                    <p>Authorized Comptech EV Dealer</p>
+                    <p>Serving Dewas for 2+ years</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Keladevi Chorahana<br>Near Salasar Granite<br>Dewas, MP - 455001</p>
+                    <p><i class="fas fa-phone"></i> +91 9907579406</p>
+                    <p><i class="fas fa-envelope"></i> sagunmotersdewas@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/919907579406" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/comptech_shagun_motos41" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="map-link">
+                        <a href="contact.html#map" class="btn btn-outline-light">View on Map</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shagun Moters Dewas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919907579406?text=Hello%20Shagun%20Moters!%20I'm%20interested%20in%20Comptech%20EV%20Scooters" 
+       class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Add showroom photos here.
+
+Examples:
+- Showroom interior
+- Showroom exterior
+- Display area
+- Service center
+
+Format: JPG or PNG

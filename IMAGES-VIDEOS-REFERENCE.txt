@@ -1,0 +1,82 @@
+========================================
+IMAGES & VIDEOS REFERENCE
+========================================
+
+IMAGES ADDED TO WEBSITE
+------------------------
+
+Home Page (index.html):
+- Card 1: assets/6967ba47-91e9-44ba-bbcc-af6fab52aafa.jfif
+- Card 2: assets/b3ec8aec-66f3-46ea-8aa3-51d1df772f2c.jfif
+- Card 3: assets/bbd60c24-cb21-4c8b-9be9-15e738c123d2.jfif
+
+Products Page (products.html):
+- Main Image: assets/b9ebf011-edae-49c5-a427-bf0ee6cab4b9.jfif
+
+Gallery Page (gallery.html):
+All 12 images are displayed:
+1. assets/6967ba47-91e9-44ba-bbcc-af6fab52aafa.jfif
+2. assets/7ea98468-fc78-4094-bd53-4acff7edb0ec.jfif
+3. assets/b1b6297b-17ed-4ea4-81cd-6c7444857b0e.jfif
+4. assets/b3ec8aec-66f3-46ea-8aa3-51d1df772f2c.jfif
+5. assets/b9ebf011-edae-49c5-a427-bf0ee6cab4b9.jfif
+6. assets/bbd60c24-cb21-4c8b-9be9-15e738c123d2.jfif
+7. assets/bf6df38d-01c5-4bac-b0fa-8040089de930.jfif
+8. assets/d5007bdd-9e79-4276-85e8-2d62855f0a51.jfif
+9. assets/ea672a85-4b15-43b4-ab81-baa556d3e583.jfif
+10. assets/eba79e77-0ba7-4dbe-b412-2a1f2f0a6814.jfif
+11. assets/ee61e091-b581-41af-b97f-62e1fad08a3f.jfif
+12. assets/ffacc8eb-0687-445d-885e-868452ac37aa.jfif
+
+VIDEOS ADDED TO WEBSITE
+------------------------
+
+Home Page (index.html):
+- Video 1: assets/VID-20260313-WA0009.mp4
+- Video 2: assets/WhatsApp Video 2026-03-12 at 23.12.09.mp4
+
+Gallery Page (gallery.html):
+All 11 videos are displayed:
+1. assets/VID-20260313-WA0009.mp4
+2. assets/VID-20260313-WA0011.mp4
+3. assets/WhatsApp Video 2026-03-12 at 23.12.09 (1).mp4
+4. assets/WhatsApp Video 2026-03-12 at 23.12.09.mp4
+5. assets/WhatsApp Video 2026-03-12 at 23.13.36 (1).mp4
+6. assets/WhatsApp Video 2026-03-12 at 23.13.36.mp4
+7. assets/WhatsApp Video 2026-03-12 at 23.13.37 (1).mp4
+8. assets/WhatsApp Video 2026-03-12 at 23.13.37.mp4
+9. assets/WhatsApp Video 2026-03-12 at 23.14.14.mp4
+10. assets/WhatsApp Video 2026-03-12 at 23.14.15 (1).mp4
+11. assets/WhatsApp Video 2026-03-12 at 23.14.15.mp4
+
+HOW TO ADD MORE IMAGES/VIDEOS
+------------------------------
+
+1. Add new images to the assets/ folder
+2. Open js/gallery.js
+3. Add the filename to the appropriate array:
+   - scooters: [] for scooter photos
+   - delivery: [] for customer delivery photos
+   - showroom: [] for showroom photos
+   - videos: [] for video files
+
+Example:
+scooters: [
+    'assets/your-new-image.jpg',
+    'assets/another-image.png'
+]
+
+4. Save the file and refresh your browser
+
+TO ORGANIZE IMAGES BY CATEGORY
+-------------------------------
+
+You can move images to subfolders:
+- Move scooter photos to: assets/scooters/
+- Move delivery photos to: assets/delivery/
+- Move showroom photos to: assets/showroom/
+- Move videos to: assets/videos/
+
+Then update the paths in js/gallery.js accordingly.
+
+========================================

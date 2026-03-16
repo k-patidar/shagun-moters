@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Shagun Moters Dewas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Shagun Moters</h1>
+                        <p class="tagline">Authorized Comptech EV Dealer</p>
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="test-ride.html" class="btn-test-ride">Book Test Ride</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in Touch with Shagun Moters Dewas</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Our Showroom</h3>
+                        <p>Keladevi Chorahana<br>Near Salasar Granite<br>Ke Pass Shagun Moters<br>Dewas, Madhya Pradesh<br>PIN: 455001</p>
+                        <a href="#map" class="btn btn-outline">View on Map</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>For inquiries and support</p>
+                        <a href="tel:+919907579406" class="contact-link">+91 9907579406</a>
+                        <a href="tel:+919907579406" class="btn btn-primary">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>Quick response on WhatsApp</p>
+                        <a href="https://wa.me/919907579406" class="contact-link">+91 9907579406</a>
+                        <a href="https://wa.me/919907579406?text=Hello%20Shagun%20Moters!%20I'm%20interested%20in%20Comptech%20EV%20Scooters" target="_blank" class="btn btn-success">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>Send us your queries</p>
+                        <a href="mailto:sagunmotersdewas@gmail.com" class="contact-link">sagunmotersdewas@gmail.com</a>
+                        <a href="mailto:sagunmotersdewas@gmail.com" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i> Send Email
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3>Follow Us</h3>
+                        <p>Stay updated on Instagram</p>
+                        <a href="https://instagram.com/comptech_shagun_motos41" target="_blank" class="contact-link">@comptech_shagun_motos41</a>
+                        <a href="https://instagram.com/comptech_shagun_motos41" target="_blank" class="btn btn-instagram">
+                            <i class="fab fa-instagram"></i> Follow on Instagram
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Business Hours</h3>
+                        <p><strong>Monday - Saturday</strong><br>10:00 AM - 7:00 PM</p>
+                        <p><strong>Sunday</strong><br>10:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Name *</label>
+                                <input type="text" id="contactName" name="name" required placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">Phone *</label>
+                                <input type="tel" id="contactPhone" name="phone" required placeholder="Your Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="Your Email (Optional)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">Select Subject</option>
+                                <option value="Product Inquiry">Product Inquiry</option>
+                                <option value="Test Ride">Test Ride Booking</option>
+                                <option value="Service Request">Service Request</option>
+                                <option value="Spare Parts">Spare Parts</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" required rows="5" placeholder="Your Message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-section" id="map">
+                <h2>Find Us on Map</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.123456789!2d76.05!3d22.96!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU3JzM2LjAiTiA3NsKwMDMnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p class="map-note">Keladevi Chorahana, Near Salasar Granite, Dewas, MP - 455001</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Message Sent Successfully!</h2>
+            <p>Thank you for contacting Shagun Moters. We will get back to you soon.</p>
+            <button class="btn btn-primary" onclick="document.getElementById('successModal').style.display='none'">Close</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Shagun Moters Dewas</h3>
+                    <p>Authorized Comptech EV Dealer</p>
+                    <p>Serving Dewas for 2+ years</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Keladevi Chorahana<br>Near Salasar Granite<br>Dewas, MP - 455001</p>
+                    <p><i class="fas fa-phone"></i> +91 9907579406</p>
+                    <p><i class="fas fa-envelope"></i> sagunmotersdewas@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/919907579406" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/comptech_shagun_motos41" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="map-link">
+                        <a href="contact.html#map" class="btn btn-outline-light">View on Map</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shagun Moters Dewas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919907579406?text=Hello%20Shagun%20Moters!%20I'm%20interested%20in%20Comptech%20EV%20Scooters" 
+       class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

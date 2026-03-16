@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Test Ride - Shagun Moters Dewas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Shagun Moters</h1>
+                        <p class="tagline">Authorized Comptech EV Dealer</p>
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="test-ride.html" class="btn-test-ride active">Book Test Ride</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Test Ride</h1>
+            <p>Experience Comptech EV Scooter - Booking Fee ₹2000</p>
+        </div>
+    </section>
+
+    <section class="test-ride-section">
+        <div class="container">
+            <div class="test-ride-wrapper">
+
+                <!-- Left Info Panel -->
+                <div class="test-ride-info">
+                    <h2>Test Ride Kyun Book Karein?</h2>
+                    <ul class="test-ride-benefits">
+                        <li><i class="fas fa-check-circle"></i> Smooth electric ride experience karein</li>
+                        <li><i class="fas fa-check-circle"></i> Instant torque aur acceleration feel karein</li>
+                        <li><i class="fas fa-check-circle"></i> Saari features aur controls test karein</li>
+                        <li><i class="fas fa-check-circle"></i> Hamare expert team se guidance lein</li>
+                        <li><i class="fas fa-check-circle"></i> Sahi decision lein</li>
+                    </ul>
+
+                    <div class="booking-details">
+                        <h3>Booking Details</h3>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <div>
+                                <h4>Booking Fee: ₹2000</h4>
+                                <p>Purchase pe refundable</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Duration: 30-45 minutes</h4>
+                                <p>Full test ride experience</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-id-card"></i>
+                            <div>
+                                <h4>Requirement</h4>
+                                <p>Valid driving license zaroori hai</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UPI Payment Box -->
+                    <div class="upi-payment-box">
+                        <h3><i class="fas fa-mobile-alt"></i> UPI Se Payment Karein</h3>
+                        <p class="upi-amount">₹2000</p>
+
+                        <div class="upi-apps">
+                            <!-- PhonePe -->
+                            <a href="phonepe://pay?pa=9907579406@ybl&pn=ShagunMoters&am=2000&cu=INR&tn=TestRideBooking"
+                               class="upi-app-btn phonepe-btn" id="phonepayBtn">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/PhonePe_Logo.png/200px-PhonePe_Logo.png"
+                                     alt="PhonePe" onerror="this.style.display='none'">
+                                <span><i class="fas fa-mobile-alt"></i> PhonePe</span>
+                            </a>
+
+                            <!-- Google Pay -->
+                            <a href="tez://upi/pay?pa=9907579406@ybl&pn=ShagunMoters&am=2000&cu=INR&tn=TestRideBooking"
+                               class="upi-app-btn gpay-btn" id="gpayBtn">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Google_Pay_Logo.svg/200px-Google_Pay_Logo.svg.png"
+                                     alt="Google Pay" onerror="this.style.display='none'">
+                                <span><i class="fas fa-google"></i> Google Pay</span>
+                            </a>
+
+                            <!-- Any UPI -->
+                            <a href="upi://pay?pa=9907579406@ybl&pn=ShagunMoters&am=2000&cu=INR&tn=TestRideBooking"
+                               class="upi-app-btn anyupi-btn" id="anyUpiBtn">
+                                <span><i class="fas fa-wallet"></i> Any UPI App</span>
+                            </a>
+                        </div>
+
+                        <div class="upi-id-box">
+                            <p>Ya seedha UPI ID pe bhejein:</p>
+                            <div class="upi-id-copy">
+                                <span id="upiIdText">9907579406@ybl</span>
+                                <button onclick="copyUPI()" class="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                            </div>
+                        </div>
+
+                        <p class="upi-note"><i class="fas fa-info-circle"></i> Payment ke baad form fill karein aur submit karein. WhatsApp pe confirmation aayega.</p>
+                    </div>
+                </div>
+
+                <!-- Right Form Panel -->
+                <div class="test-ride-form-container">
+                    <h2><i class="fab fa-whatsapp"></i> Booking Form</h2>
+                    <p class="form-subtitle">Form submit hone par WhatsApp pe message jayega</p>
+
+                    <form id="testRideForm" class="test-ride-form">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Pura Naam *</label>
+                            <input type="text" id="name" name="name" required placeholder="Apna pura naam likhein">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobile"><i class="fas fa-phone"></i> Mobile Number *</label>
+                            <input type="tel" id="mobile" name="mobile" required placeholder="10 digit mobile number" pattern="[0-9]{10}" maxlength="10">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city"><i class="fas fa-map-marker-alt"></i> Shehar *</label>
+                            <input type="text" id="city" name="city" required placeholder="Apna shehar likhein">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="scooterModel"><i class="fas fa-motorcycle"></i> Scooter Model *</label>
+                            <select id="scooterModel" name="scooterModel" required>
+                                <option value="">-- Model Chunein --</option>
+                                <option value="Comptech EV Standard">Comptech EV Standard</option>
+                                <option value="Comptech EV Premium">Comptech EV Premium</option>
+                                <option value="Comptech EV Pro">Comptech EV Pro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="testRideDate"><i class="fas fa-calendar"></i> Test Ride Date *</label>
+                            <input type="date" id="testRideDate" name="testRideDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeSlot"><i class="fas fa-clock"></i> Time Slot *</label>
+                            <select id="timeSlot" name="timeSlot" required>
+                                <option value="">-- Time Chunein --</option>
+                                <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                                <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                                <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                                <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                                <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+                                <option value="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</option>
+                                <option value="5:00 PM - 6:00 PM">5:00 PM - 6:00 PM</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="utrNumber"><i class="fas fa-receipt"></i> UPI Transaction ID / UTR Number</label>
+                            <input type="text" id="utrNumber" name="utrNumber" placeholder="Payment ke baad UTR number likhein (optional)">
+                        </div>
+
+                        <div class="booking-fee">
+                            <h3><i class="fas fa-rupee-sign"></i> Booking Fee: ₹2000</h3>
+                            <p>Upar diye UPI se payment karein, phir submit karein</p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-whatsapp-submit">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Pe Booking Bhejein
+                        </button>
+
+                        <p class="form-note"><i class="fas fa-info-circle"></i> Submit karne par WhatsApp khulega aur booking details jayegi +91 9907579406 pe</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-icon"><i class="fas fa-check-circle"></i></div>
+            <h2>Booking Successful!</h2>
+            <p>Aapki test ride booking ho gayi hai.</p>
+            <div class="confirmation-details" id="confirmationDetails"></div>
+            <p class="confirmation-note"><i class="fab fa-whatsapp"></i> WhatsApp pe confirmation message bheja ja raha hai...</p>
+            <a href="index.html" class="btn btn-primary">Home Pe Jaein</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Shagun Moters Dewas</h3>
+                    <p>Authorized Comptech EV Dealer</p>
+                    <p>Serving Dewas for 2+ years</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Keladevi Chorahana<br>Near Salasar Granite<br>Dewas, MP - 455001</p>
+                    <p><i class="fas fa-phone"></i> +91 9907579406</p>
+                    <p><i class="fas fa-envelope"></i> sagunmotersdewas@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/919907579406" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/comptech_shagun_motos41" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="map-link">
+                        <a href="contact.html#map" class="btn btn-outline-light">View on Map</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shagun Moters Dewas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919907579406?text=Hello%20Shagun%20Moters!%20I'm%20interested%20in%20Comptech%20EV%20Scooters" 
+       class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/test-ride.js"></script>
+</body>
+</html>

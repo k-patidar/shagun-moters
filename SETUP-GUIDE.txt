@@ -1,0 +1,115 @@
+========================================
+SHAGUN MOTERS DEWAS - WEBSITE SETUP GUIDE
+========================================
+
+QUICK START (No Installation Required)
+---------------------------------------
+1. Double-click "index.html" to open the website in your browser
+2. Website is ready to use!
+3. All pages work without any server
+
+ADVANCED SETUP (Dynamic Gallery from Downloads)
+-----------------------------------------------
+This enables automatic loading of today's images/videos from Downloads folder.
+
+STEP 1: Install Node.js
+- Download from: https://nodejs.org
+- Install the LTS version
+- Restart your computer after installation
+
+STEP 2: Install Dependencies
+- Open Command Prompt (Windows) or Terminal (Mac/Linux)
+- Navigate to website folder:
+  cd path/to/website/folder
+- Run: npm install
+- Wait for installation to complete
+
+STEP 3: Start the Server
+- In the same terminal, run: node server.js
+- You should see: "Server running on http://localhost:3000"
+- Keep this terminal window open
+
+STEP 4: Open Website
+- Open your browser
+- Go to: http://localhost:3000
+- Gallery will now show today's downloads automatically!
+
+ADDING IMAGES MANUALLY
+-----------------------
+If you don't want to use the dynamic gallery:
+1. Create a folder named "images" in the website directory
+2. Add your photos there
+3. Update image paths in HTML files
+
+CUSTOMIZATION
+-------------
+1. Contact Information:
+   - Edit all HTML files
+   - Search for: +91 9907579406
+   - Replace with your phone number
+   - Update email, address, Instagram
+
+2. Colors:
+   - Edit: css/style.css
+   - Change --primary-color value
+   - Change --secondary-color value
+
+3. Content:
+   - Edit HTML files directly
+   - Update text, headings, descriptions
+
+PAYMENT INTEGRATION
+-------------------
+Test Ride Booking currently sends WhatsApp notification.
+
+For real payment gateway:
+1. Sign up at Razorpay.com or similar
+2. Get API keys
+3. Add payment script to test-ride.html
+4. Update test-ride.js with payment code
+
+HOSTING THE WEBSITE
+-------------------
+To make website live on internet:
+
+Option 1: Free Hosting
+- Upload files to: Netlify, Vercel, or GitHub Pages
+- Follow their upload instructions
+
+Option 2: Paid Hosting
+- Buy hosting from: Hostinger, Bluehost, etc.
+- Upload files via FTP
+- Point domain to hosting
+
+TROUBLESHOOTING
+---------------
+Problem: Images not showing
+Solution: Check image paths, create images folder
+
+Problem: Server won't start
+Solution: Make sure Node.js is installed, run npm install
+
+Problem: Gallery not loading
+Solution: Check if server is running on port 3000
+
+Problem: Forms not working
+Solution: Check internet connection for WhatsApp links
+
+SUPPORT
+-------
+For technical support:
+Phone: +91 9907579406
+WhatsApp: +91 9907579406
+Email: sagunmotersdewas@gmail.com
+
+IMPORTANT NOTES
+---------------
+- Keep all files in same folder structure
+- Don't rename main HTML files
+- Backup before making changes
+- Test on mobile devices
+- Use Chrome or Firefox for best results
+
+========================================
+© 2026 Shagun Moters Dewas
+========================================
