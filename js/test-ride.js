@@ -1,99 +1,101 @@
-document.addEventListener('DOMContentLoaded', function () {
+// Test Ride Booking Form Handler
+document.addEventListener('DOMContentLoaded', function() {
+    const testRideForm = document.getElementById('testRideForm');
+    const confirmationModal = document.getElementById('confirmationModal');
+    const modalClose = document.querySelector('.modal-close');
 
-    // Set minimum date to tomorrow
-    const testRideDateInput = document.getElementById('testRideDate');
-    if (testRideDateInput) {
-        const tomorrow = new Date();
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        testRideDateInput.setAttribute('min', tomorrow.toISOString().split('T')[0]);
-    }
-
-    // Form submit - send to WhatsApp
-    const form = document.getElementById('testRideForm');
-    if (form) {
-        form.addEventListener('submit', function (e) {
+    if (testRideForm) {
+        testRideForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const name      = document.getElementById('name').value.trim();
-            const mobile    = document.getElementById('mobile').value.trim();
-            const city      = document.getElementById('city').value.trim();
-            const model     = document.getElementById('scooterModel').value;
-            const date      = document.getElementById('testRideDate').value;
-            const timeSlot  = document.getElementById('timeSlot').value;
-            const utr       = document.getElementById('utrNumber').value.trim();
+            const formData = {
+                name: document.getElementById('name').value,
+                mobile: document.getElementById('mobile').value,
+                city: document.getElementById('city').value,
+                scooterModel: document.getElementById('scooterModel').value,
+                testRideDate: document.getElementById('testRideDate').value,
+                timeSlot: document.getElementById('timeSlot').value,
+                utrNumber: document.getElementById('utrNumber') ? document.getElementById('utrNumber').value : ''
+            };
 
-            if (!name || !mobile || !city || !model || !date || !timeSlot) {
-                alert('Kripya saare zaroori fields bharein!');
+            if (!formData.name || !formData.mobile || !formData.city || !formData.scooterModel || !formData.testRideDate || !formData.timeSlot) {
+                alert('Please fill all required fields');
                 return;
             }
 
-            if (mobile.length !== 10) {
-                alert('Sahi 10 digit mobile number daalen!');
-                return;
+            const whatsappMessage = `*New Test Ride Booking - Shagun Moters*%0A%0A` +
+                `%F0%9F%91%A4 Name: ${formData.name}%0A` +
+                `%F0%9F%93%B1 Mobile: ${formData.mobile}%0A` +
+                `%F0%9F%8F%99%EF%B8%8F City: ${formData.city}%0A` +
+                `%F0%9F%9B%B5 Model: ${formData.scooterModel}%0A` +
+                `%F0%9F%93%85 Date: ${formData.testRideDate}%0A` +
+                `%E2%8F%B0 Time: ${formData.timeSlot}%0A` +
+                `%F0%9F%92%B3 UPI ID: lovepatidar406-2%40okicici%0A` +
+                `%F0%9F%A7%BE UTR/TxnID: ${formData.utrNumber || 'Not provided'}%0A` +
+                `%F0%9F%92%B0 Booking Fee: %E2%82%B92000`;
+
+            window.open(`https://wa.me/919907579406?text=${whatsappMessage}`, '_blank');
+
+            const confirmationDetails = document.getElementById('confirmationDetails');
+            if (confirmationDetails) {
+                confirmationDetails.innerHTML = `
+                    <p><strong>Name:</strong> ${formData.name}</p>
+                    <p><strong>Mobile:</strong> ${formData.mobile}</p>
+                    <p><strong>Model:</strong> ${formData.scooterModel}</p>
+                    <p><strong>Date:</strong> ${formData.testRideDate}</p>
+                    <p><strong>Time:</strong> ${formData.timeSlot}</p>
+                `;
             }
 
-            // Build WhatsApp message
-            const msg =
-                `🛵 *COMPTECH EV - TEST RIDE BOOKING*%0A` +
-                `━━━━━━━━━━━━━━━━━━━━%0A` +
-                `👤 *Naam:* ${name}%0A` +
-                `📱 *Mobile:* ${mobile}%0A` +
-                `🏙️ *Shehar:* ${city}%0A` +
-                `🛵 *Scooter Model:* ${model}%0A` +
-                `📅 *Date:* ${date}%0A` +
-                `⏰ *Time Slot:* ${timeSlot}%0A` +
-                `💰 *Booking Fee:* ₹2000%0A` +
-                `🔖 *UTR/Transaction ID:* ${utr || 'Not provided'}%0A` +
-                `━━━━━━━━━━━━━━━━━━━━%0A` +
-                `📍 *Shagun Moters Dewas*%0A` +
-                `Keladevi Chorahana, Near Salasar Granite%0A` +
-                `Dewas, MP - 455001`;
-
-            // Show confirmation modal first
-            const details = document.getElementById('confirmationDetails');
-            details.innerHTML = `
-                <p>👤 <strong>Naam:</strong> ${name}</p>
-                <p>📱 <strong>Mobile:</strong> ${mobile}</p>
-                <p>🛵 <strong>Model:</strong> ${model}</p>
-                <p>📅 <strong>Date:</strong> ${date}</p>
-                <p>⏰ <strong>Time:</strong> ${timeSlot}</p>
-                <p>💰 <strong>Fee:</strong> ₹2000</p>
-            `;
-            document.getElementById('confirmationModal').style.display = 'block';
-
-            // Open WhatsApp with message
-            setTimeout(() => {
-                window.open(`https://wa.me/919907579406?text=${msg}`, '_blank');
-            }, 500);
-
-            form.reset();
+            if (confirmationModal) confirmationModal.style.display = 'block';
+            testRideForm.reset();
         });
     }
 
-    // Modal close
-    const modalClose = document.querySelector('.modal-close');
     if (modalClose) {
-        modalClose.addEventListener('click', () => {
-            document.getElementById('confirmationModal').style.display = 'none';
+        modalClose.addEventListener('click', function() {
+            if (confirmationModal) confirmationModal.style.display = 'none';
         });
     }
 
-    window.addEventListener('click', function (e) {
-        const modal = document.getElementById('confirmationModal');
-        if (e.target === modal) modal.style.display = 'none';
+    window.addEventListener('click', function(e) {
+        if (e.target === confirmationModal) confirmationModal.style.display = 'none';
     });
 });
 
 // Copy UPI ID to clipboard
 function copyUPI() {
-    const upiId = document.getElementById('upiIdText').textContent;
+    const upiId = 'lovepatidar406-2@okicici';
     navigator.clipboard.writeText(upiId).then(() => {
-        const btn = document.querySelector('.copy-btn');
-        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-        btn.style.background = '#28a745';
-        setTimeout(() => {
-            btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
-            btn.style.background = '';
-        }, 2000);
+        const btn = document.getElementById('copyBtn');
+        if (btn) {
+            btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            btn.style.background = '#218838';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                btn.style.background = '';
+            }, 2500);
+        }
+    }).catch(() => {
+        // Fallback for older browsers
+        const el = document.createElement('textarea');
+        el.value = upiId;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        const btn = document.getElementById('copyBtn');
+        if (btn) {
+            btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => { btn.innerHTML = '<i class="fas fa-copy"></i> Copy'; }, 2500);
+        }
     });
+}
+
+// Show payment done badge when UPI app button clicked
+function markPaid() {
+    setTimeout(() => {
+        const badge = document.getElementById('paymentConfirmed');
+        if (badge) badge.style.display = 'block';
+    }, 1500);
 }

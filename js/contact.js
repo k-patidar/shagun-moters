@@ -23,8 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Create WhatsApp message
-            const whatsappMessage = `*New Contact Form Submission*%0A%0A` +
+            const whatsappMessage = `*New Contact Form - Shagun Moters*%0A%0A` +
                 `Name: ${formData.name}%0A` +
                 `Phone: ${formData.phone}%0A` +
                 `Email: ${formData.email || 'Not provided'}%0A` +

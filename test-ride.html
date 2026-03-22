@@ -82,42 +82,58 @@
 
                     <!-- UPI Payment Box -->
                     <div class="upi-payment-box">
-                        <h3><i class="fas fa-mobile-alt"></i> UPI Se Payment Karein</h3>
+                        <h3><i class="fas fa-mobile-alt"></i> Step 1: ₹2000 Payment Karein</h3>
                         <p class="upi-amount">₹2000</p>
 
-                        <div class="upi-apps">
-                            <!-- PhonePe -->
-                            <a href="phonepe://pay?pa=9907579406@ybl&pn=ShagunMoters&am=2000&cu=INR&tn=TestRideBooking"
-                               class="upi-app-btn phonepe-btn" id="phonepayBtn">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/PhonePe_Logo.png/200px-PhonePe_Logo.png"
-                                     alt="PhonePe" onerror="this.style.display='none'">
-                                <span><i class="fas fa-mobile-alt"></i> PhonePe</span>
-                            </a>
-
-                            <!-- Google Pay -->
-                            <a href="tez://upi/pay?pa=9907579406@ybl&pn=ShagunMoters&am=2000&cu=INR&tn=TestRideBooking"
-                               class="upi-app-btn gpay-btn" id="gpayBtn">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Google_Pay_Logo.svg/200px-Google_Pay_Logo.svg.png"
-                                     alt="Google Pay" onerror="this.style.display='none'">
-                                <span><i class="fas fa-google"></i> Google Pay</span>
-                            </a>
-
-                            <!-- Any UPI -->
-                            <a href="upi://pay?pa=9907579406@ybl&pn=ShagunMoters&am=2000&cu=INR&tn=TestRideBooking"
-                               class="upi-app-btn anyupi-btn" id="anyUpiBtn">
-                                <span><i class="fas fa-wallet"></i> Any UPI App</span>
-                            </a>
-                        </div>
-
+                        <!-- UPI ID Copy -->
                         <div class="upi-id-box">
-                            <p>Ya seedha UPI ID pe bhejein:</p>
+                            <p><i class="fas fa-info-circle"></i> Neeche UPI ID copy karein aur apni UPI app mein paste karein:</p>
                             <div class="upi-id-copy">
-                                <span id="upiIdText">9907579406@ybl</span>
-                                <button onclick="copyUPI()" class="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                                <span id="upiIdText">lovepatidar406-2@okicici</span>
+                                <button onclick="copyUPI()" class="copy-btn" id="copyBtn">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
                             </div>
                         </div>
 
-                        <p class="upi-note"><i class="fas fa-info-circle"></i> Payment ke baad form fill karein aur submit karein. WhatsApp pe confirmation aayega.</p>
+                        <!-- QR Code using Google Charts API -->
+                        <div class="upi-qr-section">
+                            <p><i class="fas fa-qrcode"></i> Ya QR Code scan karein:</p>
+                            <div class="qr-code-box">
+                                <img 
+                                    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=lovepatidar406-2@okicici%26pn=ShagunMoters%26am=2000%26cu=INR%26tn=TestRideBooking"
+                                    alt="UPI QR Code - Scan to Pay ₹2000"
+                                    width="200" height="200"
+                                    onerror="this.parentElement.innerHTML='<p style=color:red>QR load nahi hua. UPI ID copy karein.</p>'"
+                                >
+                                <p class="qr-label">Scan karein - ₹2000</p>
+                                <small>PhonePe / GPay / Paytm / Any UPI App</small>
+                            </div>
+                        </div>
+
+                        <!-- Direct UPI Links for Mobile -->
+                        <div class="upi-apps">
+                            <p><i class="fas fa-mobile-alt"></i> Mobile pe seedha open karein:</p>
+                            <div class="upi-app-buttons">
+                                <a href="upi://pay?pa=lovepatidar406-2@okicici&pn=ShagunMoters&am=2000&cu=INR&tn=TestRideBooking"
+                                   class="upi-app-btn anyupi-btn" onclick="markPaid()">
+                                    <i class="fas fa-wallet"></i> UPI App Se Pay
+                                </a>
+                                <a href="https://phon.pe/ru_9907579406" target="_blank"
+                                   class="upi-app-btn phonepe-btn" onclick="markPaid()">
+                                    <i class="fas fa-mobile-alt"></i> PhonePe
+                                </a>
+                            </div>
+                        </div>
+
+                        <div id="paymentConfirmed" class="payment-confirmed-badge" style="display:none;">
+                            <i class="fas fa-check-circle"></i> Payment Done! Ab form fill karein.
+                        </div>
+
+                        <p class="upi-note">
+                            <i class="fas fa-lightbulb"></i> 
+                            <strong>Steps:</strong> UPI ID copy karein → Apni UPI app kholen → Send Money → Paste karein → ₹2000 bhejein → UTR number note karein → Form fill karein
+                        </p>
                     </div>
                 </div>
 
@@ -215,9 +231,9 @@
                 </div>
                 <div class="footer-col">
                     <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Keladevi Chorahana<br>Near Salasar Granite<br>Dewas, MP - 455001</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 18, Ganga Nagar<br>Nexa Showroom ke Peche<br>Dewas, MP - 455001</p>
                     <p><i class="fas fa-phone"></i> +91 9907579406</p>
-                    <p><i class="fas fa-envelope"></i> sagunmotersdewas@gmail.com</p>
+                    <p><i class="fas fa-envelope"></i> shagunmotors406@gmail.com</p>
                 </div>
                 <div class="footer-col">
                     <h3>Quick Links</h3>
